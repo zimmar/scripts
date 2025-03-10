@@ -31,8 +31,9 @@
 
 LOGFILE=/var/log/rsync_log/rsync_cron.log
 PIDFILE=/tmp/rsync_cron.pid
-SOURCE=/home/admzimmermann/Dokumente/privat/*.*
-DESTINATION=/home/admzimmermann/Dokumente/privat/backup/
+# Change the entries
+SOURCE=/home/<userid>/Dokumente/privat/*.*
+DESTINATION=/home/<userid>/Dokumente/privat/backup/
 
 function cleanup {
     # Remove the PID file
@@ -57,11 +58,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# rsync --remove-source-files /mnt/nas/media/*.* /home/paperless_usr/paperless_ngx/consume/
-
 rsync --remove-source-files \
     --info=ALL2 \
     --log-file=$LOGFILE \
+    # change the entries
     --exclude="@*.*" \
     --exclude="*.tmp" \
     --exclude="*.part" \
