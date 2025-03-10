@@ -10,7 +10,7 @@ The script is intended to be run as a cron job.
 The script will be run every 5 minutes.
 The entry in the crontab will look like this:
 
-´´´bash
+```bash
 # */5 * * * * /path/to/rsync_cron.sh
 ```
 
