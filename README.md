@@ -31,9 +31,9 @@ The log file must be created with the correct permissions:
 
 ```bash
 sudo touch /var/log/rsync_log/rsync_cron.log
-sudo chown admzimmermann:admzimmermann /var/log/rsync_log/rsync_cron.log
+sudo chown <userid>:<grouid> /var/log/rsync_log/rsync_cron.log
 ```
 
-- The source directory is /mnt/nas/media/*.*
-- The destination directory is /home/paperless_usr/paperless_ngx/consume/
+- The source directory is /example/nas/media/*.*
+- The destination directory is /home/<userid>/<dir>/consume/
 - The PID file will be created in /tmp/rsync_cron.pid
